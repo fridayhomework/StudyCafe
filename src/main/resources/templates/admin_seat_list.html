@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>좌석 관리</title>
+</head>
+<body>
+<h1>관리자 좌석 관리</h1>
+<table>
+  <tr>
+    <th>좌석 번호</th>
+    <th>좌석 이름</th>
+    <th>상태</th>
+    <th>대기 걸기</th>
+  </tr>
+  <tr th:each="seat : ${seats}">
+    <td th:text="${seat.seatNo}"></td>
+    <td th:text="${seat.seatName}"></td>
+    <td th:text="${seat.status}"></td>
+    <td>
+      <form th:action="@{'/admin/seat/set-waiting/' + ${seat.seatNo}}" method="post">
+        <button type="submit" th:disabled="${seat.status == '사용중'}">대기 걸기</button>
+      </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
