@@ -42,9 +42,9 @@ HELP.md
 # 트리 구조 텍스트 무시
 tree.txt
 
-# gradle wrapper 무시 (원하면 주석 해제)
-# gradlew
-# gradlew.bat
+gradle wrapper 무시 (원하면 주석 해제)
+gradlew
+gradlew.bat
 
 # git 속성 무시 (일반적으로는 유지하는 게 좋음)
-# .gitattributes
+.gitattributes
