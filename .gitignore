@@ -48,3 +48,7 @@ gradlew.bat
 
 # git 속성 무시 (일반적으로는 유지하는 게 좋음)
 .gitattributes
+
+# 민감한 설정 파일 무시
+src/main/resources/application.properties
+
